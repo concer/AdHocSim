@@ -1,0 +1,33 @@
+#! /bin/csh
+
+
+set i = 1
+#speed used
+set p = 0
+#different runs with the same speed
+set runs = 5
+
+#max speed
+set max = 10
+
+#speed incremental
+set inc = 1
+
+set seed = 2
+
+while ( $p < $max )
+	#echo "world.mobileHost[*].mobility.pauseTime = $p s"  > Ini/pauseTime.ini
+	echo "world.mobileHost[*].mobility.maxSpeed =  $p "  > Ini/avrSpeed.ini
+	echo "world.mobileHost[*].mobility.minSpeed =  $p "  >> Ini/avrSpeed.ini
+
+	while ( $i <= $runs )
+	 	@ seed ++; 
+		 ./adHocSim -r $seed;
+  	 	#awk -f  Awk/awkExtract  yputVect.sca >>Tmp/istics1;
+		@ i ++
+	end
+	@ i = 1
+	@ p += $inc
+end
+
+

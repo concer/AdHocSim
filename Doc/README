@@ -1,0 +1,26 @@
+This model works with OMNeT++ v. 2.2
+
+To run the simulator just:
+
+- type opp_makemake
+- type make
+- type adHocSim
+
+
+The ometpp.ini file contains almost all the parameters needed.
+Editing the Ini/mobility.ini  file you can choose the mobility model to use.
+
+The 'cmdEnv' and 'envTk' commands just set the display environment to be cmdEnv or TkEnv.
+
+The 'genseed' is a shell script that generate a new Ini/seed.inis file. This ini file is used
+to execute many runs all different from each other.
+
+The 'script' shell script executes many runs with different speeds and seeds.
+
+The NewAwk directory contains some awk and shell script that generate graph with 
+gnuplot processing the 'collcectedData.dat' simulator output file.
+
+
+
+
+

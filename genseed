@@ -1,0 +1,16 @@
+#! /bin/csh
+
+
+set runs = 120
+set seed = 1311751
+
+set nseed 
+
+@ nseed = 5 * $runs
+
+seedtool g $seed 10000 $nseed > tmp_file  
+#awk -f Awk/generateParamSeeds tmp_file >  parameters.ini
+#awk -f Awk/generateActives tmp_file >  active.ini
+awk -f Awk/generateSeeds tmp_file >  Ini/seeds.ini
+rm -f tmp_file
+

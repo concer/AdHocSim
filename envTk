@@ -1,0 +1,4 @@
+#g++  mobileHost_n.o simple_n.o world_n.o aodv.o application.o mac.o  normal.o physic.o pursuit.o randomDirection.o randomWalk.o randomWP.o restrictedRandWalk.o      -L/home/nic/omnetpp/lib -lenvir -ltkenv -ltk -ltcl -L/usr/X11R6/lib -lX11  -lsim_std -lstdc++ -ldl -lm  -o adHocSim 
+
+
+opp_makemake -o adHocSim -f -u tkEnv

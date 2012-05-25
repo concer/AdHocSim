@@ -1,0 +1,31 @@
+AdHocSim is the outcome of my Bachelor's thesis that I completed in 2003.
+
+AdHocSim models an ad-hoc wireless network of a many independent nodes
+moving in a empty space and is based on OMNeT++ v. 3.0.
+
+The project includes:
+- 	a physical layer model for each host in charge of dynamically enable
+	unidirectional or bi-directional communication links. The links are created 
+	in a independent way in function of the location,
+	transmission power and the sensitivity of the antenna of each host;
+
+- 	a simple MAC layer model in charge of discarding received packets that are
+	not addressed to the specific host;
+
+-	a routing layer that implements two alternative protocols:
+  	+ AODV standard draft v.10;
+  	+ DSV ;
+
+- 	a set of host-mobility algorithms, in particular:
+	+ random walk,
+	+ restricted random walk,
+	+ random direction, 
+	+ random waypoint, 
+	+ pursuit model, 
+	+ normal markovian mobility model;
+
+-	an application layer in charge of generating random traffic following
+	an exponential distribution.
+	
+   
+For installation guide please follow the included PDF file.
